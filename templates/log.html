@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Log Data</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            padding: 20px;
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Log Data</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>UUID</th>
+                    <th>KEY</th>
+                    <th>TXT</th>
+                    <th>SESSION</th>
+                    <th>IPADDR</th>
+                    <th>APP</th>
+                    <th>TIME</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for log in logs %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ log[1] }}</td> <!-- UUID -->
+                    <td>{{ log[2] }}</td> <!-- KEY -->
+                    <td>{{ log[3] }}</td> <!-- TXT -->
+                    <td>{{ log[4] }}</td> <!-- SESSION -->
+                    <td>{{ log[5] }}</td> <!-- IPADDR -->
+                    <td>{{ log[6] }}</td> <!-- APP -->
+                    <td>{{ log[7] }}</td> <!-- TIME -->
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

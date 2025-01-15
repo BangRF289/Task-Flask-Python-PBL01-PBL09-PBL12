@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Admin Dashboard</h1>
+    </header>
+    <div class="container">
+      <h2>Users</h2>
+      <ul>
+        {% for user in users %}
+        <li>{{ user[1] }} ({{ user[3] }})</li>
+        <!-- Menampilkan username dan email -->
+        {% endfor %}
+      </ul>
+      <h2>Posts</h2>
+      <ul>
+        {% for post in posts %}
+        <li>User ID: {{ post[1] }} - {{ post[2] }} - {{ post[3] }}</li>
+        <!-- Menampilkan ID pengguna, teks postingan, dan tanggal/waktu -->
+        {% endfor %}
+      </ul>
+      <a href="{{ url_for('logout') }}">Logout</a>
+      <!-- Link Logout -->
+    </div>
+  </body>
+</html>

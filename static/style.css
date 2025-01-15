@@ -1,0 +1,95 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Set basic styles for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Center the main content */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Style the header */
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Style the forms */
+form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Style input fields */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style buttons */
+button {
+    background: #35424a;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+/* Style the profile posts */
+ul {
+    margin-top: 20px;
+}
+
+li {
+    background: #ffffff;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the admin dashboard */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.admin-table th, .admin-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.admin-table th {
+    background: #35424a;
+    color: #ffffff;
+}
